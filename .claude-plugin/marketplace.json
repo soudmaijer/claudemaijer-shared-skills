@@ -1,0 +1,14 @@
+{
+  "name": "claudemaijer-shared-skills",
+  "description": "Marketplace for shared agent skills",
+  "owner": {
+    "name": "Stephan Oudmaijer"
+  },
+  "plugins": [
+    {
+      "name": "claudemaijer-shared-skills",
+      "source": "./",
+      "description": "Shared agent skills"
+    }
+  ]
+}

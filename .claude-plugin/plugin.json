@@ -1,0 +1,12 @@
+{
+  "name": "claudemaijer-shared-skills",
+  "displayName": "Shared skills",
+  "version": "0.1.0",
+  "description": "Shared agent skills",
+  "author": {
+    "name": "Stephan Oudmaijer"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/soudmaijer/claudemaijer-shared-skills",
+  "keywords": ["skills"]
+}

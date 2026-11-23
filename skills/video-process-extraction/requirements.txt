@@ -1,0 +1,4 @@
+faster-whisper>=1.2
+# faster-whisper 1.2 fails with av 16+ (open() got an unexpected keyword 'metadata_errors')
+av<16
+pillow
