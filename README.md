@@ -4,6 +4,8 @@ Shared agent skills for Claude Code and other agent tools.
 
 | Skill | Purpose |
 |---|---|
+| [demo-video](skills/demo-video/README.md) | Makes a narrated demo video of a running web app, with slides, subtitles, a cursor and spotlights. Runs fully offline. |
+| [implementation-video](skills/implementation-video/README.md) | Makes a short proof-of-work video that shows finished tickets working and how they were validated. Uses the demo-video scripts. |
 | [video-process-extraction](skills/video-process-extraction/README.md) | Extracts the process, workflow and requirements from a screen recording. On request it also writes an English user journey for a vendor, compares the result with docs, code or release notes, or drafts mails to the recorder. |
 
 ## Installation

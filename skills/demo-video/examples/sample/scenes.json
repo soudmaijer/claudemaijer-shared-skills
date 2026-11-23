@@ -1,0 +1,56 @@
+[
+ {
+  "id": "t1",
+  "kind": "slide",
+  "sents": [
+   "Welcome to a short tour of Example Notes, a simple app for writing and sharing notes."
+  ]
+ },
+ {
+  "id": "t2",
+  "kind": "slide",
+  "sents": [
+   "In this video we look at the start page, and how to write a new note."
+  ]
+ },
+ {
+  "id": "a1",
+  "kind": "app",
+  "url": "/index.html",
+  "ready": {
+   "selector": "h1"
+  },
+  "sents": [
+   {
+    "text": "This is the start page. The list on the left shows your notes.",
+    "act": [
+     {
+      "target": {
+       "selector": "nav"
+      },
+      "pad": 12
+     }
+    ]
+   },
+   {
+    "text": "To write a new note, you click New note.",
+    "act": [
+     {
+      "target": {
+       "role": "button",
+       "name": "New note"
+      },
+      "click": true
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "e1",
+  "kind": "slide",
+  "sents": [
+   "Thank you for watching."
+  ]
+ }
+]
