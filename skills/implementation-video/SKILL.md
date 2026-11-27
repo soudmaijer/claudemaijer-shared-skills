@@ -1,6 +1,7 @@
 ---
 name: implementation-video
 description: Make a short narrated implementation video (proof of work) that shows one or more finished tickets working in the running app and how the work was validated, for an audience that already knows the product. Reuses the scripts, theme and rules of the demo-video skill (offline voice, Playwright recording, film-style subtitles, cursor and spotlights). Use this when someone asks for an implementation video, proof of work, a video of a change, a ticket demo or a sprint review clip.
+compatibility: Requires the demo-video and subtitles skills from this package. Install all three together.
 metadata:
   version: "1.0.1"
 ---

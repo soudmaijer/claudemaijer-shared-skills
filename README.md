@@ -9,6 +9,25 @@ Shared agent skills for Claude Code and other agent tools.
 | [subtitles](skills/subtitles/README.md) | House style and script for burned-in subtitles plus a matching `.srt`: short cues, balanced lines, a light box. Used by the other video skills. |
 | [video-process-extraction](skills/video-process-extraction/README.md) | Extracts the process, workflow and requirements from a screen recording. On request it also writes an English user journey for a vendor, compares the result with docs, code or release notes, or drafts mails to the recorder. |
 
+### Skills that depend on each other
+
+Some skills use the scripts of another skill in this package. Neither the plugin format nor APM can declare a dependency between two skills of one package, so each dependent skill states it in the `compatibility` field of its `SKILL.md`:
+
+| Skill | Also install |
+|---|---|
+| `demo-video` | `subtitles` |
+| `implementation-video` | `demo-video`, `subtitles` |
+
+Installing the whole plugin or package covers this. When you pick single skills with APM, pick the dependencies as well:
+
+```yaml
+dependencies:
+  apm:
+    - git: <org>/<repo>
+      skills: [demo-video, subtitles]
+```
+
+
 ## Installation
 
 ### Claude Code plugin (recommended)

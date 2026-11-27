@@ -1,6 +1,7 @@
 ---
 name: demo-video
 description: Make a narrated demo video of a running web application for viewers who are new to it, with intro slides, film-style subtitles, a cursor, spotlights and zooms on what is being explained, and smooth transitions. Everything runs locally (offline text-to-speech, Playwright recording, ffmpeg). Use this when someone asks for a demo video, screen recording, walkthrough, product tour or explainer of an app. For a short video that proves a finished ticket works, use the implementation-video skill, which reuses this skill's scripts.
+compatibility: Requires the subtitles skill from this package. Install both together.
 metadata:
   version: "1.1.0"
 ---
