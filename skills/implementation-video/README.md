@@ -2,7 +2,7 @@
 
 Makes a short narrated video (about 2 to 2.5 minutes) that proves one or more finished tickets work. The audience already knows the product, so the video skips the domain explanation and shows the change and the evidence.
 
-This skill reuses the scripts, theme and rules of [demo-video](../demo-video/README.md). Install both; the plugin and the APM package do that for you.
+This skill reuses the scripts, theme and rules of [demo-video](../demo-video/README.md). Its subtitles follow the [subtitles](../subtitles/README.md) skill. Install all three; the plugin and the APM package do that for you.
 
 ## What the video contains
 
