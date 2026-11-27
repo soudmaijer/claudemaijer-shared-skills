@@ -38,7 +38,7 @@ python scripts/prepare_video.py VIDEO --out OUTDIR --lang nl --vocab TERMS.txt
 Frames use change detection: a frame is saved when at least 1% of the pixels change (`--threshold 0.01`), at most every 2 s (`--min-gap`) and at least every 15 s (`--max-gap`). `--threshold 0` gives a fixed frame every `--max-gap` seconds. Small changes such as a status-bar message can stay below the threshold; lower it (for example 0.003) if such moments matter. A moving webcam tile can cause many frames; raise `--min-gap` then. Model: `large-v3-turbo` (`--model`; use `small` on a slow laptop). The first run downloads the model (about 1.6 GB). On a CPU, expect roughly 1/4 to 1x the video length.
 
 Output in OUTDIR:
-- `transcript.srt`: raw speech with timestamps.
+- `transcript.srt`: raw speech with timestamps, for analysis only. It is not a caption file: to put subtitles on a video, use the `subtitles` skill.
 - `transcript.txt`: one line per segment, `[hh:mm:ss] text`.
 - `frames/f_NNN.jpg` and `frames/index.tsv` (frame name, timestamp, reason: start / change / max-gap).
 

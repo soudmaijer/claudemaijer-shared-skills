@@ -1,15 +1,16 @@
 ---
 name: implementation-video
 description: Make a short narrated implementation video (proof of work) that shows one or more finished tickets working in the running app and how the work was validated, for an audience that already knows the product. Reuses the scripts, theme and rules of the demo-video skill (offline voice, Playwright recording, film-style subtitles, cursor and spotlights). Use this when someone asks for an implementation video, proof of work, a video of a change, a ticket demo or a sprint review clip.
+compatibility: Requires the demo-video and subtitles skills from this package. Install all three together.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Making an implementation video
 
 An implementation video shows that one or more tickets are built and work. Its audience knows the product, so it skips the domain explanation and spends the time on the change and the evidence. Aim for about 2 to 2.5 minutes.
 
-This skill uses the `demo-video` skill in the same plugin. Read its `SKILL.md` (`../demo-video/SKILL.md`) and follow every section marked **(shared)**: what the video rests on, visual cues, subtitles and transitions, slides and theme, setup, how to build it, reuse, scripts, where it goes and afterwards. Run the scripts from `../demo-video/scripts/` and copy `../demo-video/examples/sample/` as the starting point. If the `demo-video` skill is not installed, stop and tell the person to install it.
+This skill uses the `demo-video` skill in the same plugin. Read its `SKILL.md` (`../demo-video/SKILL.md`) and follow every section marked **(shared)**: what the video rests on, visual cues, subtitles and transitions, slides and theme, setup, how to build it, reuse, scripts, where it goes and afterwards. Run the scripts from `../demo-video/scripts/` and copy `../demo-video/examples/sample/` as the starting point. Subtitles follow the `subtitles` skill (`../subtitles/SKILL.md`), which `assemble.py` uses. If the `demo-video` or `subtitles` skill is not installed, stop and tell the person to install it.
 
 ## Inputs
 

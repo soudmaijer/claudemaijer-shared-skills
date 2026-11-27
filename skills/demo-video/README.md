@@ -1,8 +1,10 @@
 # demo-video
 
-Makes a narrated demo video of a running web application, for viewers who are new to it. The video has intro slides, film-style subtitles, a cursor, spotlights and zooms on what is explained, and smooth transitions.
+Makes a narrated demo video of a running web application, for viewers who are new to it. The video has intro slides, burned-in subtitles, a cursor, spotlights and zooms on what is explained, and smooth transitions.
 
 Everything runs locally: the voice is an offline text-to-speech model (Kokoro), the screens are recorded with Playwright, and ffmpeg joins the result. No text or audio leaves your machine.
+
+The subtitles follow the [subtitles](../subtitles/README.md) skill, which must be installed next to this one.
 
 For a short video that proves a finished ticket works, use [implementation-video](../implementation-video/README.md). It reuses the scripts in this skill.
 
@@ -37,6 +39,15 @@ You can also ask Claude: "set up demo-video".
 
 It needs ffmpeg, Node.js and Python 3.12 to 3.14. It installs Kokoro, its model files (about 340 MB) and Playwright with Chromium into `~/.local/share/demo-video-tts`. Set `DEMO_VIDEO_HOME` to use another folder.
 
+### The voice
+
+The voice is Kokoro (open source), voice `af_heart` by default. It sounds much more natural than the text-to-speech built into the operating system. Ask Claude for two or three voice samples of one scene before it narrates the whole video.
+
+`setup.sh` installs the ONNX build of Kokoro, which needs no further setup. If you use the PyTorch package (`kokoro`) instead, note that:
+- it needs Python 3.12 in a virtual environment, with `kokoro soundfile misaki[en] numpy pillow`;
+- it needs espeak-ng (Homebrew, apt or the Windows installer), and the phonemizer must find it: set `PHONEMIZER_ESPEAK_LIBRARY` to the espeak-ng library file and `ESPEAK_DATA_PATH` to its `espeak-ng-data` folder;
+- the model is downloaded to the Hugging Face cache; set `HF_HOME` to keep it in a folder of your choice.
+
 ## Usage
 
 Example prompts for Claude Code:
@@ -60,6 +71,7 @@ The slides use the neutral theme in `theme/` (`theme.css` and `logo.svg`). For a
 | `scripts/scene.py` | Narration per scene, and muxing a clip with its audio |
 | `scripts/record.js` | Records a slide or an app screen with cursor, spotlight and zoom |
 | `scripts/assemble.py` | Joins the clips with crossfades and burns in the subtitles |
+| `../subtitles/` | Subtitle style and `captions.py`, used by `assemble.py` |
 | `theme/` | Neutral slide theme |
 | `examples/sample/` | A small invented example: scenes, slides, a pronunciation map and a local demo page |
 
